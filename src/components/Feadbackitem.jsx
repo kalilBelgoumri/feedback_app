@@ -1,9 +1,9 @@
-function Feadbackitem() {
-  
+function Feadbackitem({ratings,text}) {
+
   return (
     <div className="card">
-      <div className="num-display">10 </div>
-      <div className="text-display">Exemple de text</div>
+      <div className="num-display"> {ratings} </div>
+      <div className="text-display">{text}</div>
     </div>
   );
 }

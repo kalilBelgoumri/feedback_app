@@ -1,8 +1,8 @@
 import "./App.css";
 import { useState } from "react";
-import Feadbackitem from "./components/Feadbackitem";
 import Header from "./components/Header";
-import FeedBackData from './data/FeedBackData';
+import FeedBackData from "./data/FeedBackData";
+import FeedBackList from "./components/FeedBackList";
 
 function App() {
   const [feedBack, setFeedBack] = useState(FeedBackData);
@@ -10,7 +10,7 @@ function App() {
     <>
       <Header />
       <div className="container">
-        <Feadbackitem />
+        <FeedBackList feedBack={feedBack} />
       </div>
     </>
   );
