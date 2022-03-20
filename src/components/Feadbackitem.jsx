@@ -1,10 +1,18 @@
 import Card from "./shared/Card";
+import { AiOutlineClose } from "react-icons/ai";
 
-function Feadbackitem({ ratings, text }) {
+function Feadbackitem({ item,handleDelete }) {
+
+  const handleClick = (id) => {
+    console.log(id);
+  }
   return (
     <Card>
-      <div className="num-display"> {ratings} </div>
-      <div className="text-display">{text}</div>
+      <div className="num-display"> {item.rating} </div>
+      <button onClick={() => handleDelete(item.id)} className="close">
+        <AiOutlineClose color="purple"  />
+      </button>
+      <div className="text-display">{item.text}</div>
     </Card>
   );
 }
