@@ -1,10 +1,11 @@
-function Feadbackitem({ratings,text}) {
+import Card from "./shared/Card";
 
+function Feadbackitem({ ratings, text }) {
   return (
-    <div className="card">
+    <Card>
       <div className="num-display"> {ratings} </div>
       <div className="text-display">{text}</div>
-    </div>
+    </Card>
   );
 }
 
