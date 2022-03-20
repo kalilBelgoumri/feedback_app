@@ -3,9 +3,7 @@ import { AiOutlineClose } from "react-icons/ai";
 
 function Feadbackitem({ item,handleDelete }) {
 
-  const handleClick = (id) => {
-    console.log(id);
-  }
+
   return (
     <Card>
       <div className="num-display"> {item.rating} </div>
