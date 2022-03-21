@@ -8,7 +8,6 @@ import FeedBackList from "./components/FeedBackList";
 import FeedbackStats from "./components/FeedbackStats";
 import FeedbackForm from "./components/FeedbackForm";
 import About from "./pages/About";
-import Post from "./components/Post";
 import Notfound from "./components/Notfound";
 
 function App() {
@@ -38,7 +37,6 @@ function App() {
             }
           />
           <Route path="/about" element={<About />} />
-          <Route path="/post" element={<Post />} />
           <Route path="*" element={<Notfound />} />
         </Routes>
       </BrowserRouter>
