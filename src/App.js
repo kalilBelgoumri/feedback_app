@@ -9,6 +9,7 @@ import FeedbackStats from "./components/FeedbackStats";
 import FeedbackForm from "./components/FeedbackForm";
 import About from "./pages/About";
 import Post from "./components/Post";
+import Notfound from "./components/Notfound";
 
 function App() {
   const [feedBack, setFeedBack] = useState(FeedBackData);
@@ -36,10 +37,9 @@ function App() {
               <FeedBackList feedBack={feedBack} handleDelete={deleteFeedback} />
             }
           />
-
           <Route path="/about" element={<About />} />
-          <Route path="/post/:id" element={<Post />} />
-
+          <Route path="/post" element={<Post />} />
+          <Route path="*" element={<Notfound />} />
         </Routes>
       </BrowserRouter>
     </div>
