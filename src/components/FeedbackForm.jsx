@@ -13,7 +13,7 @@ function FeedbackForm({ handleAdd }) {
     if (text === "") {
       setBtnDisabled(true);
       setMessage(null);
-    } else if (text !== "" && text.trim().length < 10) {
+    } else if (text !== "" && text.trim().length <= 10) {
       setMessage("Votre message doit contenir au moin 10 caractères");
       setBtnDisabled(true);
     } else {
