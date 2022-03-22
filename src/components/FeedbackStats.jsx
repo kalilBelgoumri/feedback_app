@@ -1,17 +1,22 @@
-import React from "react";
+import { useContext } from "react";
+import FeedbackContext from "../context/FeedbackContext";
 
-function FeedbackStats({ feedBack }) {
+function FeedbackStats() {
+  const { feedBack } = useContext(FeedbackContext);
+
   let average =
     feedBack.reduce((acc, cur) => {
       return acc + cur.rating;
     }, 0) / feedBack.length;
 
-  average=average.toFixed(1).replace(/[.,]0$/,'')
+  average = average.toFixed(1).replace(/[.,]0$/, "");
 
   return (
     <div className="feedback-stats">
       <h4 className="feedback-reviews "> {feedBack.length} Reviews </h4>
-      <h4 className="feedback-average">Average Ratings : {isNaN(average) ? 0 : average}</h4>
+      <h4 className="feedback-average">
+        Average Ratings : {isNaN(average) ? 0 : average}
+      </h4>
     </div>
   );
 }
